@@ -1,0 +1,2 @@
+import type { LunexState } from '../types/lunex';
+export function AICoreOrb({ state }: { state: LunexState }) { return <section className={`orb-shell ${state}`}><div className="orb-ring"><div className="orb-core"><span>LX</span></div></div><div className="waveform">{Array.from({ length: 28 }, (_, i) => <i key={i} style={{ animationDelay: `${i * 45}ms` }} />)}</div><p className="state-label">{state.replace(/_/g, ' ')}</p></section>; }
